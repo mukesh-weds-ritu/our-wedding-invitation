@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ritu Maurya &amp; Mukesh Kumar Kushwaha — Wedding Invitation</title>
-    <meta name="description" content="Together with our families, we invite you to the wedding of Ritu Maurya &amp; Mukesh Kumar Kushwaha — 22nd November 2026, Channarayapattana.">
+    <meta name="description" content="Together with our families, we invite you to celebrate the wedding of Ritu Maurya &amp; Mukesh Kumar Kushwaha on 22nd November 2026.">
     <meta name="theme-color" content="#2E6A52">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232E6A52'/%3E%3Cpath d='M32 50C22 42 14 36 14 28a10 10 0 0 1 18-6 10 10 0 0 1 18 6c0 8-8 14-18 22z' fill='%23F9D7E0'/%3E%3C/svg%3E">
 
     <!-- Social share preview -->
     <meta property="og:title" content="Ritu Maurya &amp; Mukesh Kumar Kushwaha — Wedding Invitation">
-    <meta property="og:description" content="22nd November 2026 • Wedding Ceremony • Channarayapattana">
+    <meta property="og:description" content="Join us to celebrate the wedding of Ritu Maurya &amp; Mukesh Kumar Kushwaha on 22nd November 2026.">
     <meta property="og:image" content="files/a1.jpeg">
     <meta property="og:type" content="website">
 
@@ -469,6 +469,13 @@
         <div class="cover-text-container">
             <h2 class="cover-names">Ritu Maurya <span class="cover-ampersand">&amp;</span> Mukesh Kumar Kushwaha</h2>
             <div class="cover-date">22nd November 2026</div>
+            <p class="countdown-note" id="countdown-note">Counting down to our forever</p>
+            <div class="countdown-container" id="countdown-container" aria-label="Countdown to the wedding">
+                <div class="countdown-box"><span class="countdown-val" id="countdown-days">--</span><span class="countdown-lbl">Days</span></div>
+                <div class="countdown-box"><span class="countdown-val" id="countdown-hours">--</span><span class="countdown-lbl">Hours</span></div>
+                <div class="countdown-box"><span class="countdown-val" id="countdown-minutes">--</span><span class="countdown-lbl">Minutes</span></div>
+                <div class="countdown-box"><span class="countdown-val" id="countdown-seconds">--</span><span class="countdown-lbl">Seconds</span></div>
+            </div>
             <div class="slide-dots" id="slide-dots"><i class="on"></i><i></i><i></i><i></i></div>
         </div>
 
@@ -649,6 +656,31 @@
                 audioBtn.innerHTML = "🎵";
             }
         });
+
+        /* ---------- wedding countdown (India time) ---------- */
+        function updateWeddingCountdown() {
+            const weddingDate = new Date('2026-11-22T00:00:00+05:30').getTime();
+            const remaining = weddingDate - Date.now();
+            const note = document.getElementById('countdown-note');
+            if (remaining <= 0) {
+                document.getElementById('countdown-days').textContent = '0';
+                document.getElementById('countdown-hours').textContent = '00';
+                document.getElementById('countdown-minutes').textContent = '00';
+                document.getElementById('countdown-seconds').textContent = '00';
+                note.textContent = 'Today we begin our forever';
+                return;
+            }
+            const days = Math.floor(remaining / 86400000);
+            const hours = Math.floor((remaining % 86400000) / 3600000);
+            const minutes = Math.floor((remaining % 3600000) / 60000);
+            const seconds = Math.floor((remaining % 60000) / 1000);
+            document.getElementById('countdown-days').textContent = String(days);
+            document.getElementById('countdown-hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('countdown-minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('countdown-seconds').textContent = String(seconds).padStart(2, '0');
+        }
+        updateWeddingCountdown();
+        setInterval(updateWeddingCountdown, 1000);
 
         /* ---------- cover slideshow ---------- */
         const slides = document.querySelectorAll('.cover-slide');
