@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ritu Maurya &amp; Mukesh Kumar Kushwaha — Wedding Invitation</title>
+    <meta name="description" content="Together with our families, we invite you to the wedding of Ritu Maurya &amp; Mukesh Kumar Kushwaha — 22nd November 2026, Channarayapattana.">
+    <meta name="theme-color" content="#2E6A52">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232E6A52'/%3E%3Cpath d='M32 50C22 42 14 36 14 28a10 10 0 0 1 18-6 10 10 0 0 1 18 6c0 8-8 14-18 22z' fill='%23F9D7E0'/%3E%3C/svg%3E">
+
+    <!-- Social share preview -->
+    <meta property="og:title" content="Ritu Maurya &amp; Mukesh Kumar Kushwaha — Wedding Invitation">
+    <meta property="og:description" content="22nd November 2026 • Wedding Ceremony • Channarayapattana">
+    <meta property="og:image" content="files/a1.jpeg">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&family=Great+Vibes&family=Noto+Sans+Kannada:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --wedding-green: #2E6A52;      /* deep emerald — primary */
+            --green-deep:    #17402F;      /* gradient partner */
+            --green-mid:     #3F8A66;
+            --green-soft:    #E4F1EA;
+            --primary-pink:  #F9D7E0;      /* blush */
+            --pink-soft:     #FDEFF3;
+            --rose:          #E39BB2;
+            --deep-rose:     #C4677F;
+            --accent-gold:   #D4AF37;
+            --bg-cream:      #FFFCF8;
+            --bg-pure-white: #FFFFFF;
+            --text-main:     #26312C;
+            --text-muted:    #6D7C74;
+            --shadow-subtle: 0 15px 35px rgba(46, 106, 82, 0.10);
+            --transition-smooth: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-cream);
+            min-height: 100vh;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        .kn { font-family: 'Noto Sans Kannada', 'Montserrat', sans-serif; }
+
+        /* --- BACKGROUND MUSIC AUDIO FLOATER --- */
+        .audio-control-btn {
+            position: fixed;
+            bottom: 25px; right: 25px;
+            width: 50px; height: 50px;
+            background: linear-gradient(135deg, var(--accent-gold) 0%, #B38F1D 100%);
+            border: none; border-radius: 50%;
+            color: #FFF; font-size: 1.2rem;
+            cursor: pointer; z-index: 9999;
+            display: flex; justify-content: center; align-items: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: var(--transition-smooth);
+        }
+        .audio-control-btn:hover { transform: scale(1.1); }
+
+        /* --- AMBIENT FALLING PETALS --- */
+        .flower-container {
+            position: fixed; top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none; z-index: 99; overflow: hidden;
+        }
+        .flower-petal {
+            position: absolute; font-size: 1.2rem;
+            opacity: 0; user-select: none;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0%   { transform: translateY(-10%) translateX(0) rotate(0deg); opacity: 0; }
+            12%  { opacity: 0.55; }
+            88%  { opacity: 0.55; }
+            100% { transform: translateY(110vh) translateX(120px) rotate(450deg); opacity: 0; }
+        }
+
+        /* --- IMMERSIVE ENVELOPE / SPLASH SCREEN --- */
+        #splash-screen {
+            position: fixed; top: 0; left: 0;
+            width: 100%; height: 100vh; height: 100dvh;
+            background: linear-gradient(135deg, var(--wedding-green) 0%, var(--green-deep) 100%);
+            display: flex; justify-content: center; align-items: center;
+            z-index: 10000;
+            transition: transform 1.3s cubic-bezier(0.76, 0, 0.24, 1);
+            overflow: hidden;
+        }
+        #splash-screen::before {
+            content: ''; position: absolute;
+            width: 200%; height: 200%;
+            background: repeating-linear-gradient(45deg, rgba(212,175,55,0.05) 0px, rgba(212,175,55,0.05) 2px, transparent 2px, transparent 20px);
+        }
+        #splash-screen::after {
+            content: ''; position: absolute;
+            width: 460px; height: 460px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(249,215,224,0.16) 0%, rgba(249,215,224,0) 70%);
+        }
+        #splash-screen.opened { transform: translateY(-100%); }
+        .envelope-wrapper {
+            text-align: center; color: #ffffff;
+            width: 90%; max-width: 500px; padding: 40px 20px;
+            z-index: 2; position: relative;
+        }
+        .monogram {
+            font-family: 'Allura', cursive;
+            font-size: 6rem; line-height: 1.1;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+            opacity: 0; transform: scale(0.8);
+            animation: fadeInScale 1.5s forwards 0.3s;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        .splash-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.6rem; letter-spacing: 5px;
+            margin-bottom: 15px; text-transform: uppercase; color: #FFF;
+            opacity: 0; animation: fadeInBlur 1.2s forwards 0.8s;
+        }
+        .splash-subtitle {
+            font-weight: 300; font-size: 1rem; letter-spacing: 2px;
+            color: var(--primary-pink); margin-bottom: 40px;
+            opacity: 0; animation: fadeInBlur 1.2s forwards 1.2s;
+        }
+        .open-envelope-btn {
+            background: transparent;
+            border: 2px solid var(--accent-gold);
+            color: #ffffff; padding: 16px 40px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem; font-weight: 600; letter-spacing: 3px;
+            text-transform: uppercase; cursor: pointer; border-radius: 50px;
+            opacity: 0; animation: fadeInUp 1s forwards 1.6s;
+            transition: var(--transition-smooth);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .open-envelope-btn:hover {
+            color: var(--wedding-green); border-color: #FFF; background-color: #FFF;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+        }
+
+        /* --- FULL-BLEED PHOTO COVER WITH SLIDESHOW --- */
+        .photo-cover-section {
+            height: 100vh; height: 100dvh;
+            width: 100%; position: relative; overflow: hidden;
+            display: flex; flex-direction: column;
+            justify-content: flex-end; align-items: center;
+            text-align: center; color: #FFFFFF;
+            padding: 60px 20px 34px 20px;
+            background-color: var(--green-deep);
+        }
+        .cover-slide {
+            position: absolute; inset: 0; z-index: 0;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            opacity: 0; will-change: opacity;
+            transition: opacity 1.4s ease-in-out;
+            animation: kenburns 16s ease-in-out infinite alternate;
+        }
+        .cover-slide.on { opacity: 1; z-index: 1; }
+        @keyframes kenburns {
+            0%   { transform: scale(1.0); }
+            100% { transform: scale(1.09); }
+        }
+        .cover-scrim {
+            position: absolute; inset: 0; z-index: 3;
+            background: linear-gradient(to bottom,
+                rgba(23, 64, 47, 0.30) 0%,
+                rgba(0, 0, 0, 0.10) 32%,
+                rgba(0, 0, 0, 0.45) 66%,
+                rgba(0, 0, 0, 0.78) 88%,
+                var(--bg-cream) 100%);
+        }
+        .cover-text-container { width: 100%; max-width: 800px; z-index: 5; }
+        .cover-names {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem; font-weight: 700; letter-spacing: 2px;
+            text-shadow: 2px 4px 15px rgba(0, 0, 0, 0.75);
+            margin-bottom: 10px; color: #FFF; line-height: 1.15;
+        }
+        .cover-ampersand {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem; color: var(--accent-gold);
+            display: block; margin: -8px 0;
+            text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+        .cover-date {
+            font-weight: 500; font-size: 1.1rem; letter-spacing: 6px;
+            text-transform: uppercase;
+            text-shadow: 1px 2px 10px rgba(0, 0, 0, 0.7);
+            border-bottom: 2px solid var(--accent-gold);
+            padding-bottom: 8px; margin-top: 15px; display: inline-block;
+        }
+        .slide-dots { display: flex; gap: 8px; justify-content: center; margin-top: 22px; z-index: 5; }
+        .slide-dots i {
+            width: 7px; height: 7px; border-radius: 50%;
+            background: rgba(255,255,255,0.45);
+            transition: var(--transition-smooth);
+        }
+        .slide-dots i.on { background: var(--accent-gold); transform: scale(1.35); }
+        .cover-bottom-wrapper {
+            width: 100%; display: flex; flex-direction: column; align-items: center;
+            margin-top: 26px; z-index: 10;
+        }
+        .scroll-indicator {
+            display: flex; flex-direction: column; align-items: center;
+            color: #FFFFFF; font-weight: 600; font-size: 0.85rem;
+            letter-spacing: 2px; text-transform: uppercase;
+            animation: bounce 2s infinite;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+        }
+        .scroll-indicator span { font-size: 1.4rem; margin-top: 3px; color: var(--accent-gold); }
+
+        /* --- MAIN CONTAINER --- */
+        .invitation-container {
+            max-width: 850px; margin: 0 auto;
+            padding: 40px 20px 80px 20px;
+            opacity: 0; transform: translateY(40px);
+            transition: all 1.2s cubic-bezier(0.25, 1, 0.5, 1) 0.3s;
+        }
+        .invitation-container.visible { opacity: 1; transform: translateY(0); }
+
+        .hero-card {
+            background-color: rgba(255, 255, 255, 0.98);
+            border-radius: 16px; padding: 50px 30px;
+            text-align: center; box-shadow: var(--shadow-subtle);
+            margin-bottom: 40px; position: relative;
+            border: 2px solid rgba(212, 175, 55, 0.28);
+        }
+        .hero-card::before, .hero-card::after {
+            content: '🌿'; position: absolute; top: 15px; font-size: 1.2rem;
+        }
+        .hero-card::before { left: 15px; }
+        .hero-card::after  { right: 15px; }
+        .hero-eyebrow {
+            font-family: 'Cinzel', serif; font-size: 0.8rem; letter-spacing: 4px;
+            text-transform: uppercase; color: var(--wedding-green);
+            margin-bottom: 16px;
+        }
+        .invite-statement {
+            font-size: 1.1rem; color: var(--text-main);
+            max-width: 580px; margin: 0 auto; line-height: 1.8;
+        }
+
+        /* --- NAVIGATION TABS --- */
+        .navigation-tabs {
+            display: flex; justify-content: center;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 50px; box-shadow: var(--shadow-subtle);
+            margin-bottom: 35px; padding: 6px;
+            position: sticky; top: 20px; z-index: 100;
+            border: 1px solid rgba(212,175,55,0.28);
+            backdrop-filter: blur(8px);
+        }
+        .tab-trigger {
+            background: none; border: none; flex: 1;
+            padding: 15px 10px; font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem; font-weight: 600; letter-spacing: 2px;
+            text-transform: uppercase; color: var(--text-muted);
+            cursor: pointer; transition: var(--transition-smooth); border-radius: 40px;
+        }
+        .tab-trigger:hover { color: var(--wedding-green); background-color: var(--pink-soft); }
+        .tab-trigger.active {
+            color: var(--bg-pure-white);
+            background: linear-gradient(135deg, var(--wedding-green) 0%, var(--green-mid) 100%);
+            box-shadow: 0 4px 15px rgba(46, 106, 82, 0.28);
+        }
+
+        /* --- PANELS --- */
+        .tab-content-panel {
+            display: none;
+            background-color: rgba(255, 255, 255, 0.98);
+            border-radius: 16px; box-shadow: var(--shadow-subtle);
+            padding: 50px 40px; border: 1px solid rgba(212,175,55,0.18);
+            animation: panelFadeInUp 0.5s ease forwards;
+        }
+        .tab-content-panel.active { display: block; }
+        .panel-title {
+            font-family: 'Cinzel', serif; font-size: 1.6rem;
+            color: var(--wedding-green); text-align: center;
+            margin-bottom: 40px; letter-spacing: 2px;
+        }
+        .panel-title::after {
+            content: '❦'; display: block; color: var(--accent-gold);
+            font-size: 1.2rem; margin-top: 5px;
+        }
+
+        /* --- COUNTDOWN --- */
+        .countdown-note {
+            font-size: 0.85rem; font-weight: 600; letter-spacing: 2px;
+            line-height: 1.7; text-transform: uppercase; color: var(--wedding-green);
+            margin-top: 34px; margin-bottom: 0;
+        }
+        .countdown-note b { display: inline-block; font-weight: 600; white-space: nowrap; }
+        .countdown-container { display: flex; gap: 15px; justify-content: center; margin-top: 18px; }
+        .countdown-box {
+            background: linear-gradient(135deg, var(--wedding-green) 0%, var(--green-deep) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.45);
+            padding: 12px 18px; border-radius: 8px; min-width: 75px;
+            box-shadow: 0 6px 20px rgba(46,106,82,0.18);
+            transition: min-width 0.3s ease, padding 0.3s ease;
+        }
+        .countdown-box.hidden { display: none !important; }
+        .countdown-val {
+            font-family: 'Cinzel', serif; font-size: 1.6rem;
+            font-weight: 700; color: var(--accent-gold); display: block;
+        }
+        .countdown-lbl { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: #FFF; }
+
+        /* --- SCHEDULE TIMELINE --- */
+        .schedule-timeline { position: relative; max-width: 600px; margin: 0 auto; padding-left: 35px; }
+        .schedule-timeline::before {
+            content: ''; position: absolute;
+            left: 7px; top: 5px; bottom: 5px; width: 2px;
+            background: linear-gradient(to bottom, var(--accent-gold), var(--rose), var(--green-mid));
+        }
+        .timeline-item { position: relative; margin-bottom: 45px; }
+        .timeline-item:last-child { margin-bottom: 0; }
+        .timeline-dot {
+            position: absolute; left: -35px; top: 4px;
+            width: 16px; height: 16px; border-radius: 50%;
+            background-color: var(--wedding-green);
+            border: 3px solid var(--bg-pure-white);
+            box-shadow: 0 0 0 2px var(--accent-gold);
+        }
+        .timeline-time {
+            font-size: 0.9rem; font-weight: 600; color: var(--wedding-green);
+            letter-spacing: 1px; margin-bottom: 6px;
+            background-color: var(--green-soft);
+            display: inline-block; padding: 3px 11px; border-radius: 4px;
+        }
+        .timeline-title { font-family: 'Cinzel', serif; font-size: 1.2rem; color: var(--text-main); margin-bottom: 4px; }
+        .timeline-sub { font-size: 0.9rem; color: var(--deep-rose); margin-bottom: 8px; }
+        .timeline-desc { font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; }
+        .timeline-where {
+            display: inline-block; margin-top: 10px;
+            font-size: 0.82rem; font-weight: 600; letter-spacing: 0.5px;
+            color: var(--deep-rose); background: var(--pink-soft);
+            padding: 5px 12px; border-radius: 20px; text-decoration: none;
+            border: 1px solid rgba(196,103,127,0.25);
+            transition: var(--transition-smooth);
+        }
+        .timeline-where:hover { background: var(--primary-pink); }
+
+        /* --- VENUE CARDS --- */
+        .venue-card {
+            text-align: center; max-width: 620px; margin: 0 auto;
+            padding-bottom: 40px;
+        }
+        .venue-card + .venue-card {
+            border-top: 1px dashed rgba(212,175,55,0.5);
+            padding-top: 42px;
+        }
+        .venue-pic-icon svg {
+            width: 190px; height: 190px; display: block;
+            margin: 0 auto 18px auto;
+            border-radius: 14px;
+        }
+        .venue-tag {
+            font-size: 0.72rem; font-weight: 600; letter-spacing: 3px;
+            text-transform: uppercase; color: var(--bg-pure-white);
+            background: var(--green-mid); padding: 5px 14px;
+            border-radius: 20px; display: inline-block; margin-bottom: 14px;
+        }
+        .venue-tag.rose { background: var(--deep-rose); }
+        .venue-name {
+            font-family: 'Cinzel', serif; font-size: 1.32rem;
+            color: var(--wedding-green); margin-bottom: 10px; font-weight: 700; line-height: 1.4;
+        }
+        .venue-address { font-size: 1rem; color: var(--text-main); line-height: 1.7; margin-bottom: 26px; }
+        .venue-when { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 22px; letter-spacing: 1px; }
+        .map-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--wedding-green) 0%, var(--green-deep) 100%);
+            color: #FFF; border: none; padding: 14px 34px;
+            font-size: 0.85rem; font-weight: 600; letter-spacing: 2px;
+            text-transform: uppercase; text-decoration: none;
+            transition: var(--transition-smooth); border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(46,106,82,0.22); cursor: pointer;
+        }
+        .map-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(46,106,82,0.38);
+            background: linear-gradient(135deg, var(--green-mid) 0%, var(--wedding-green) 100%);
+        }
+        .map-btn.rose { background: linear-gradient(135deg, var(--deep-rose) 0%, #8E4256 100%); box-shadow: 0 4px 15px rgba(196,103,127,0.25); }
+        .map-btn.rose:hover { background: linear-gradient(135deg, var(--rose) 0%, var(--deep-rose) 100%); }
+
+        /* --- FOOTER --- */
+        .invite-footer { text-align: center; margin-top: 45px; color: var(--text-muted); }
+        .footer-script {
+            font-family: 'Great Vibes', cursive; font-size: 2.1rem;
+            color: var(--wedding-green); margin-bottom: 6px;
+        }
+        .footer-line { font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; }
+
+        /* --- ANIMATIONS --- */
+        @keyframes fadeInScale { 0% { opacity: 0; transform: scale(0.85); filter: blur(4px); } 100% { opacity: 1; transform: scale(1); filter: blur(0); } }
+        @keyframes fadeInBlur  { 0% { opacity: 0; filter: blur(6px); } 100% { opacity: 1; filter: blur(0); } }
+        @keyframes fadeInUp    { 0% { opacity: 0; transform: translateY(20px); } 100% { opacity: 1; transform: translateY(0); } }
+        @keyframes bounce      { 0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(-10px); } 60% { transform: translateY(-5px); } }
+        @keyframes panelFadeInUp { 0% { opacity: 0; transform: translateY(15px); } 100% { opacity: 1; transform: translateY(0); } }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 600px) {
+            .photo-cover-section { padding: 40px 15px 26px 15px; }
+            .monogram { font-size: 4.6rem; }
+            .splash-title { font-size: 1.25rem; letter-spacing: 3px; }
+            .cover-names { font-size: 2.3rem; }
+            .cover-ampersand { font-size: 2.8rem; }
+            .cover-date { font-size: 0.85rem; letter-spacing: 4px; }
+            .countdown-note { margin-top: 26px; font-size: 0.72rem; letter-spacing: 1.2px; }
+            .countdown-container { gap: 8px; margin-top: 14px; }
+            .countdown-box { min-width: 55px; padding: 6px 10px; }
+            .countdown-val { font-size: 1.2rem; }
+            .invitation-container { padding: 30px 10px 60px 10px; }
+            .hero-card { padding: 38px 20px; }
+            .navigation-tabs { top: 10px; margin-bottom: 25px; padding: 4px; }
+            .tab-trigger { padding: 12px 2px; font-size: 0.75rem; letter-spacing: 1px; }
+            .tab-content-panel { padding: 35px 16px; }
+            .timeline-time { font-size: 0.78rem; letter-spacing: 0.4px; padding: 4px 9px; }
+            .schedule-timeline { padding-left: 28px; }
+            .timeline-dot { left: -28px; }
+            .venue-pic-icon svg { width: 158px; height: 158px; }
+            .venue-name { font-size: 1.12rem; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .cover-slide { animation: none; }
+            .flower-petal { display: none; }
+            .scroll-indicator { animation: none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Ambient falling petals -->
+    <div class="flower-container" id="flower-layer"></div>
+
+    <!-- Background music -->
+    <audio id="wedding-soundtrack" loop preload="none">
+        <source src="files/music.mp3" type="audio/mpeg">
+    </audio>
+    <button class="audio-control-btn" id="audio-toggle" onclick="toggleAudio()" style="display: none;" aria-label="Toggle music">🔇</button>
+
+    <!-- Splash / envelope -->
+    <div id="splash-screen">
+        <div class="envelope-wrapper">
+            <div class="monogram">M &amp; R</div>
+            <h1 class="splash-title">The Wedding Invitation</h1>
+            <p class="splash-subtitle">Together with our families, we invite you to celebrate</p>
+            <button class="open-envelope-btn" onclick="revealInvitation()">Open Invitation</button>
+        </div>
+    </div>
+
+    <!-- Stage 1: cinematic photo cover -->
+    <section class="photo-cover-section">
+        <!-- Cover photos, shown in this order. To reorder, just swap the file names below. -->
+        <div class="cover-slide on" style="background-image:url('files/a1.jpeg')"></div>
+        <div class="cover-slide"    style="background-image:url('files/a2.jpeg')"></div>
+        <div class="cover-slide"    style="background-image:url('files/a3.jpeg')"></div>
+        <div class="cover-slide"    style="background-image:url('files/a4.jpeg')"></div>
+        <div class="cover-scrim"></div>
+
+        <div class="cover-text-container">
+            <h2 class="cover-names">Ritu Maurya <span class="cover-ampersand">&amp;</span> Mukesh Kumar Kushwaha</h2>
+            <div class="cover-date">22nd November 2026</div>
+            <div class="slide-dots" id="slide-dots"><i class="on"></i><i></i><i></i><i></i></div>
+        </div>
+
+        <div class="cover-bottom-wrapper">
+            <div class="scroll-indicator">
+                Scroll for details
+                <span>▼</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stage 2: invitation body -->
+    <div class="invitation-container" id="main-content">
+
+        <header class="hero-card">
+            <p class="hero-eyebrow">Open Invitation</p>
+            <p class="invite-statement">
+                Your love, support, and friendship mean the world to us. Please join us for our wedding
+                celebration and bless our sacred union as we step into our beautiful forever.
+            </p>
+        </header>
+
+        <nav class="navigation-tabs">
+            <button class="tab-trigger active" onclick="activateTab(event, 'schedule')">Schedule</button>
+            <button class="tab-trigger" onclick="activateTab(event, 'venue')">Venue</button>
+        </nav>
+
+        <main>
+            <!-- Panel 1: Schedule -->
+            <div id="schedule" class="tab-content-panel active">
+                <h3 class="panel-title">The Order of Events</h3>
+                <div class="schedule-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-time">Thursday, 19th November 2026</div>
+                        <h4 class="timeline-title">Tilak Ceremony 🪔</h4>
+                        <p class="timeline-desc">With joy and blessings, we invite you to join the Tilak Ceremony and celebrate this special beginning with our families.</p>
+                        <a class="timeline-where" href="https://maps.app.goo.gl/8H25HY2BxKV2v4yP9" target="_blank" rel="noopener">📍 View Tilak Ceremony Location</a>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-time">Saturday, 21st November 2026</div>
+                        <h4 class="timeline-title">Haldi Ceremony 💛</h4>
+                        <p class="timeline-desc">Join us for the joyful Haldi celebration, filled with love, laughter, traditions, and blessings for the couple.</p>
+                        <a class="timeline-where" href="https://maps.app.goo.gl/8H25HY2BxKV2v4yP9" target="_blank" rel="noopener">📍 View Haldi Ceremony Location</a>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-time">Sunday, 22nd November 2026</div>
+                        <h4 class="timeline-title">Wedding Ceremony 💍</h4>
+                        <p class="timeline-desc">Please join us as we begin our beautiful journey together. Your presence, love, and blessings will make our wedding day truly special.</p>
+                        <a class="timeline-where" href="https://maps.app.goo.gl/DsMGzb2aK4VZ6MPJ7" target="_blank" rel="noopener">📍 View Wedding Location</a>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-time">Monday, 23rd November 2026</div>
+                        <h4 class="timeline-title">Vidaai Ceremony 🌺</h4>
+                        <p class="timeline-desc">A heartfelt farewell as the celebrations continue into a new chapter, surrounded by the love and blessings of family.</p>
+                        <a class="timeline-where" href="https://maps.app.goo.gl/DsMGzb2aK4VZ6MPJ7" target="_blank" rel="noopener">📍 View Vidaai Ceremony Location</a>
+                    </div>
+                </div>
+            </div>
+
+                        <!-- Panel 2: Venue -->
+            <div id="venue" class="tab-content-panel">
+                <h3 class="panel-title">Join Us Here</h3>
+
+                <div class="venue-card">
+                    <div class="venue-pic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="Illustration of the wedding hall"><circle cx="200" cy="200" r="192" fill="#E4F1EA"/>
+  <circle cx="200" cy="200" r="192" fill="none" stroke="#A8D5BE" stroke-width="3"/>
+  <circle cx="200" cy="200" r="181" fill="none" stroke="#D4AF37" stroke-width="1.4"
+          stroke-dasharray="3 7" opacity="0.75"/>
+  <path d="M8,232 A192,192 0 0,0 392,232 L392,392 L8,392 Z" fill="#FBE3EA" opacity="0.55"/>
+  <rect x="52" y="322" width="296" height="16" rx="4" fill="#2E6A52"/><rect x="66" y="308" width="268" height="14" rx="3" fill="#3F8A66"/><rect x="52" y="322" width="296" height="4" fill="#D4AF37" opacity="0.8"/><rect x="86" y="168" width="228" height="140" fill="#FFFBF6" stroke="#2E6A52" stroke-width="3"/><path d="M170,308 L170,250 A30,30 0 0,1 230,250 L230,308 Z" fill="#3F8A66" stroke="#2E6A52" stroke-width="2.5"/><path d="M177,308 L177,253 A23,23 0 0,1 223,253 L223,308 Z" fill="#2E6A52" opacity="0.55"/><path d="M104,308 L104,262 A22,22 0 0,1 148,262 L148,308 Z" fill="#3F8A66" stroke="#2E6A52" stroke-width="2.5"/><path d="M111,308 L111,265 A15,15 0 0,1 141,265 L141,308 Z" fill="#2E6A52" opacity="0.55"/><path d="M252,308 L252,262 A22,22 0 0,1 296,262 L296,308 Z" fill="#3F8A66" stroke="#2E6A52" stroke-width="2.5"/><path d="M259,308 L259,265 A15,15 0 0,1 289,265 L289,308 Z" fill="#2E6A52" opacity="0.55"/><rect x="92" y="236" width="12" height="72" fill="#FFFBF6" stroke="#2E6A52" stroke-width="2"/><rect x="88" y="230" width="20" height="8" rx="2" fill="#D4AF37"/><rect x="152" y="236" width="12" height="72" fill="#FFFBF6" stroke="#2E6A52" stroke-width="2"/><rect x="148" y="230" width="20" height="8" rx="2" fill="#D4AF37"/><rect x="236" y="236" width="12" height="72" fill="#FFFBF6" stroke="#2E6A52" stroke-width="2"/><rect x="232" y="230" width="20" height="8" rx="2" fill="#D4AF37"/><rect x="296" y="236" width="12" height="72" fill="#FFFBF6" stroke="#2E6A52" stroke-width="2"/><rect x="292" y="230" width="20" height="8" rx="2" fill="#D4AF37"/><rect x="78" y="150" width="244" height="20" fill="#2E6A52"/><rect x="72" y="142" width="256" height="10" rx="2" fill="#D4AF37"/><circle cx="92" cy="160" r="3.2" fill="#FBE3EA"/><circle cx="111" cy="160" r="3.2" fill="#FBE3EA"/><circle cx="130" cy="160" r="3.2" fill="#FBE3EA"/><circle cx="149" cy="160" r="3.2" fill="#FBE3EA"/><circle cx="168" cy="160" r="3.2" fill="#FBE3EA"/><circle cx="187" cy="160" r="3.2" fill="#FBE3EA"/><circle cx="206" cy="160" r="3.2" fill="#FBE3EA"/><circle cx="225" cy="160" r="3.2" fill="#FBE3EA"/><circle cx="244" cy="160" r="3.2" fill="#FBE3EA"/><circle cx="263" cy="160" r="3.2" fill="#FBE3EA"/><circle cx="282" cy="160" r="3.2" fill="#FBE3EA"/><circle cx="301" cy="160" r="3.2" fill="#FBE3EA"/><path d="M88,142 Q88,104 114,100 Q140,104 140,142 Z" fill="#EFA8BF" stroke="#2E6A52" stroke-width="2.5"/><rect x="106" y="86" width="16" height="8" rx="2" fill="#D4AF37"/><path d="M114,72 L119,86 L109,86 Z" fill="#B8912A"/><path d="M260,142 Q260,104 286,100 Q312,104 312,142 Z" fill="#EFA8BF" stroke="#2E6A52" stroke-width="2.5"/><rect x="278" y="86" width="16" height="8" rx="2" fill="#D4AF37"/><path d="M286,72 L291,86 L281,86 Z" fill="#B8912A"/><path d="M148,142 Q148,78 200,72 Q252,78 252,142 Z" fill="#EFA8BF" stroke="#2E6A52" stroke-width="3"/><path d="M148,142 Q200,124 252,142" fill="none" stroke="#C4677F" stroke-width="2" opacity="0.6"/><path d="M200,72 Q176,96 172,142" fill="none" stroke="#FFFBF6" stroke-width="2" opacity="0.75"/><path d="M200,72 Q224,96 228,142" fill="none" stroke="#FFFBF6" stroke-width="2" opacity="0.75"/><ellipse cx="200" cy="66" rx="15" ry="7" fill="#D4AF37"/><path d="M188,64 Q200,42 212,64 Z" fill="#D4AF37"/><circle cx="200" cy="40" r="6" fill="#B8912A"/><path d="M200,20 L204,34 L196,34 Z" fill="#D4AF37"/><path d="M92,176 Q200.0,194 308,176" fill="none" stroke="#2E6A52" stroke-width="2"/><path d="M99.2,177.2 q7,7.5 0,16.6 q-7,-7.5 0,-16.6 Z" fill="#2E6A52"/><path d="M113.6,179.2 q7,8.0 0,17.9 q-7,-8.0 0,-17.9 Z" fill="#3F8A66"/><path d="M128.0,181.0 q7,8.6 0,19.0 q-7,-8.6 0,-19.0 Z" fill="#2E6A52"/><path d="M142.4,182.4 q7,9.0 0,20.0 q-7,-9.0 0,-20.0 Z" fill="#3F8A66"/><path d="M156.8,183.6 q7,9.4 0,20.9 q-7,-9.4 0,-20.9 Z" fill="#2E6A52"/><path d="M171.2,184.4 q7,9.7 0,21.5 q-7,-9.7 0,-21.5 Z" fill="#3F8A66"/><path d="M185.6,184.8 q7,9.8 0,21.9 q-7,-9.8 0,-21.9 Z" fill="#2E6A52"/><path d="M200.0,185.0 q7,9.9 0,22.0 q-7,-9.9 0,-22.0 Z" fill="#3F8A66"/><path d="M214.4,184.8 q7,9.8 0,21.9 q-7,-9.8 0,-21.9 Z" fill="#2E6A52"/><path d="M228.8,184.4 q7,9.7 0,21.5 q-7,-9.7 0,-21.5 Z" fill="#3F8A66"/><path d="M243.2,183.6 q7,9.4 0,20.9 q-7,-9.4 0,-20.9 Z" fill="#2E6A52"/><path d="M257.6,182.4 q7,9.0 0,20.0 q-7,-9.0 0,-20.0 Z" fill="#3F8A66"/><path d="M272.0,181.0 q7,8.6 0,19.0 q-7,-8.6 0,-19.0 Z" fill="#2E6A52"/><path d="M286.4,179.2 q7,8.0 0,17.9 q-7,-8.0 0,-17.9 Z" fill="#3F8A66"/><path d="M300.8,177.2 q7,7.5 0,16.6 q-7,-7.5 0,-16.6 Z" fill="#2E6A52"/><line x1="72" y1="176" x2="72" y2="300" stroke="#2E6A52" stroke-width="1.6"/><circle cx="72.0" cy="171.3" r="3.8" fill="#EFA8BF"/><circle cx="76.4" cy="174.6" r="3.8" fill="#EFA8BF"/><circle cx="74.7" cy="179.8" r="3.8" fill="#EFA8BF"/><circle cx="69.3" cy="179.8" r="3.8" fill="#EFA8BF"/><circle cx="67.6" cy="174.6" r="3.8" fill="#EFA8BF"/><circle cx="72.0" cy="176.0" r="2.2" fill="#D4AF37"/><path d="M74.8,185.0 C79.8,188.2 79.8,194.8 74.8,198.0 C69.8,194.8 69.8,188.2 74.8,185.0 Z" fill="#A8D5BE" transform="rotate(90 74.8 191.5)"/><circle cx="70.2" cy="202.3" r="3.8" fill="#FBE3EA"/><circle cx="74.6" cy="205.6" r="3.8" fill="#FBE3EA"/><circle cx="72.9" cy="210.8" r="3.8" fill="#FBE3EA"/><circle cx="67.4" cy="210.8" r="3.8" fill="#FBE3EA"/><circle cx="65.7" cy="205.6" r="3.8" fill="#FBE3EA"/><circle cx="70.2" cy="207.0" r="2.2" fill="#D4AF37"/><path d="M70.3,216.0 C75.3,219.2 75.3,225.8 70.3,229.0 C65.3,225.8 65.3,219.2 70.3,216.0 Z" fill="#A8D5BE" transform="rotate(-90 70.3 222.5)"/><circle cx="74.9" cy="233.3" r="3.8" fill="#EFA8BF"/><circle cx="79.3" cy="236.6" r="3.8" fill="#EFA8BF"/><circle cx="77.6" cy="241.8" r="3.8" fill="#EFA8BF"/><circle cx="72.2" cy="241.8" r="3.8" fill="#EFA8BF"/><circle cx="70.5" cy="236.6" r="3.8" fill="#EFA8BF"/><circle cx="74.9" cy="238.0" r="2.2" fill="#D4AF37"/><path d="M71.8,247.0 C76.8,250.2 76.8,256.8 71.8,260.0 C66.8,256.8 66.8,250.2 71.8,247.0 Z" fill="#A8D5BE" transform="rotate(90 71.8 253.5)"/><circle cx="69.2" cy="264.4" r="3.8" fill="#FBE3EA"/><circle cx="73.7" cy="267.6" r="3.8" fill="#FBE3EA"/><circle cx="72.0" cy="272.8" r="3.8" fill="#FBE3EA"/><circle cx="66.5" cy="272.8" r="3.8" fill="#FBE3EA"/><circle cx="64.8" cy="267.6" r="3.8" fill="#FBE3EA"/><circle cx="69.2" cy="269.0" r="2.2" fill="#D4AF37"/><path d="M74.0,278.0 C79.0,281.2 79.0,287.8 74.0,291.0 C69.0,287.8 69.0,281.2 74.0,278.0 Z" fill="#A8D5BE" transform="rotate(90 74.0 284.5)"/><circle cx="73.5" cy="295.4" r="3.8" fill="#EFA8BF"/><circle cx="77.9" cy="298.6" r="3.8" fill="#EFA8BF"/><circle cx="76.2" cy="303.8" r="3.8" fill="#EFA8BF"/><circle cx="70.7" cy="303.8" r="3.8" fill="#EFA8BF"/><circle cx="69.0" cy="298.6" r="3.8" fill="#EFA8BF"/><circle cx="73.5" cy="300.0" r="2.2" fill="#D4AF37"/><line x1="328" y1="176" x2="328" y2="300" stroke="#2E6A52" stroke-width="1.6"/><circle cx="328.0" cy="171.3" r="3.8" fill="#EFA8BF"/><circle cx="332.4" cy="174.6" r="3.8" fill="#EFA8BF"/><circle cx="330.7" cy="179.8" r="3.8" fill="#EFA8BF"/><circle cx="325.3" cy="179.8" r="3.8" fill="#EFA8BF"/><circle cx="323.6" cy="174.6" r="3.8" fill="#EFA8BF"/><circle cx="328.0" cy="176.0" r="2.2" fill="#D4AF37"/><path d="M330.8,185.0 C335.8,188.2 335.8,194.8 330.8,198.0 C325.8,194.8 325.8,188.2 330.8,185.0 Z" fill="#A8D5BE" transform="rotate(90 330.8 191.5)"/><circle cx="326.2" cy="202.3" r="3.8" fill="#FBE3EA"/><circle cx="330.6" cy="205.6" r="3.8" fill="#FBE3EA"/><circle cx="328.9" cy="210.8" r="3.8" fill="#FBE3EA"/><circle cx="323.4" cy="210.8" r="3.8" fill="#FBE3EA"/><circle cx="321.7" cy="205.6" r="3.8" fill="#FBE3EA"/><circle cx="326.2" cy="207.0" r="2.2" fill="#D4AF37"/><path d="M326.3,216.0 C331.3,219.2 331.3,225.8 326.3,229.0 C321.3,225.8 321.3,219.2 326.3,216.0 Z" fill="#A8D5BE" transform="rotate(-90 326.3 222.5)"/><circle cx="330.9" cy="233.3" r="3.8" fill="#EFA8BF"/><circle cx="335.3" cy="236.6" r="3.8" fill="#EFA8BF"/><circle cx="333.6" cy="241.8" r="3.8" fill="#EFA8BF"/><circle cx="328.2" cy="241.8" r="3.8" fill="#EFA8BF"/><circle cx="326.5" cy="236.6" r="3.8" fill="#EFA8BF"/><circle cx="330.9" cy="238.0" r="2.2" fill="#D4AF37"/><path d="M327.8,247.0 C332.8,250.2 332.8,256.8 327.8,260.0 C322.8,256.8 322.8,250.2 327.8,247.0 Z" fill="#A8D5BE" transform="rotate(90 327.8 253.5)"/><circle cx="325.2" cy="264.4" r="3.8" fill="#FBE3EA"/><circle cx="329.7" cy="267.6" r="3.8" fill="#FBE3EA"/><circle cx="328.0" cy="272.8" r="3.8" fill="#FBE3EA"/><circle cx="322.5" cy="272.8" r="3.8" fill="#FBE3EA"/><circle cx="320.8" cy="267.6" r="3.8" fill="#FBE3EA"/><circle cx="325.2" cy="269.0" r="2.2" fill="#D4AF37"/><path d="M330.0,278.0 C335.0,281.2 335.0,287.8 330.0,291.0 C325.0,287.8 325.0,281.2 330.0,278.0 Z" fill="#A8D5BE" transform="rotate(90 330.0 284.5)"/><circle cx="329.5" cy="295.4" r="3.8" fill="#EFA8BF"/><circle cx="333.9" cy="298.6" r="3.8" fill="#EFA8BF"/><circle cx="332.2" cy="303.8" r="3.8" fill="#EFA8BF"/><circle cx="326.7" cy="303.8" r="3.8" fill="#EFA8BF"/><circle cx="325.0" cy="298.6" r="3.8" fill="#EFA8BF"/><circle cx="329.5" cy="300.0" r="2.2" fill="#D4AF37"/><rect x="164" y="338" width="72" height="10" rx="2" fill="#3F8A66"/><rect x="152" y="348" width="96" height="10" rx="2" fill="#2E6A52"/><circle cx="112.0" cy="345.2" r="5.5" fill="#EFA8BF"/><circle cx="118.5" cy="349.9" r="5.5" fill="#EFA8BF"/><circle cx="116.0" cy="357.5" r="5.5" fill="#EFA8BF"/><circle cx="108.0" cy="357.5" r="5.5" fill="#EFA8BF"/><circle cx="105.5" cy="349.9" r="5.5" fill="#EFA8BF"/><circle cx="112.0" cy="352.0" r="3.3" fill="#D4AF37"/><circle cx="288.0" cy="345.2" r="5.5" fill="#EFA8BF"/><circle cx="294.5" cy="349.9" r="5.5" fill="#EFA8BF"/><circle cx="292.0" cy="357.5" r="5.5" fill="#EFA8BF"/><circle cx="284.0" cy="357.5" r="5.5" fill="#EFA8BF"/><circle cx="281.5" cy="349.9" r="5.5" fill="#EFA8BF"/><circle cx="288.0" cy="352.0" r="3.3" fill="#D4AF37"/><circle cx="92" cy="366" r="3" fill="#C4677F" opacity="0.7"/><circle cx="132" cy="366" r="3" fill="#C4677F" opacity="0.7"/><circle cx="268" cy="366" r="3" fill="#C4677F" opacity="0.7"/><circle cx="308" cy="366" r="3" fill="#C4677F" opacity="0.7"/></svg></div>
+                    <span class="venue-tag">Wedding &amp; Vidaai</span>
+                    <h4 class="venue-name">Srimathi Tirumalamma Vabegowda Marriage Hall</h4>
+                    <p class="venue-address">
+                        Channarayapattana,<br>
+                        Hassan District, Karnataka, India
+                    </p>
+                    <p class="venue-when">
+                        Sun 22 November 2026 • Wedding Ceremony<br>
+                        Mon 23 November 2026 • Vidaai Ceremony
+                    </p>
+                    <a href="https://maps.app.goo.gl/DsMGzb2aK4VZ6MPJ7" target="_blank" rel="noopener" class="map-btn">📍 Open Google Maps</a>
+                </div>
+
+                <div class="venue-card">
+                    <div class="venue-pic-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="Illustration of the Beegara Authana pandal"><circle cx="200" cy="200" r="192" fill="#E4F1EA"/>
+  <circle cx="200" cy="200" r="192" fill="none" stroke="#A8D5BE" stroke-width="3"/>
+  <circle cx="200" cy="200" r="181" fill="none" stroke="#D4AF37" stroke-width="1.4"
+          stroke-dasharray="3 7" opacity="0.75"/>
+  <path d="M8,232 A192,192 0 0,0 392,232 L392,392 L8,392 Z" fill="#FBE3EA" opacity="0.55"/>
+  <rect x="26" y="316" width="348" height="10" rx="5" fill="#2E6A52" opacity="0.85"/><rect x="69" y="150" width="18" height="170" rx="9" fill="#3F8A66" stroke="#2E6A52" stroke-width="2"/><path d="M78,150 L78,320" stroke="#2E6A52" stroke-width="1.2" opacity="0.5"/><path d="M78,150 C39.599999999999994,78 -6,98 -18,104 C-4,126 44.400000000000006,174 78,150 Z" fill="#3F8A66" stroke="#2E6A52" stroke-width="1.6"/><path d="M78,176 C44.4,116 6,136 -6,142 C8,164 48.6,200 78,176 Z" fill="#A8D5BE" stroke="#2E6A52" stroke-width="1.6"/><path d="M78,204 C49.2,156 18,176 6,182 C20,204 52.8,228 78,204 Z" fill="#3F8A66" stroke="#2E6A52" stroke-width="1.6"/><ellipse cx="78" cy="322" rx="20" ry="6" fill="#2E6A52" opacity="0.25"/><rect x="313" y="150" width="18" height="170" rx="9" fill="#3F8A66" stroke="#2E6A52" stroke-width="2"/><path d="M322,150 L322,320" stroke="#2E6A52" stroke-width="1.2" opacity="0.5"/><path d="M322,150 C360.4,78 406,98 418,104 C404,126 355.6,174 322,150 Z" fill="#3F8A66" stroke="#2E6A52" stroke-width="1.6"/><path d="M322,176 C355.6,116 394,136 406,142 C392,164 351.4,200 322,176 Z" fill="#A8D5BE" stroke="#2E6A52" stroke-width="1.6"/><path d="M322,204 C350.8,156 382,176 394,182 C380,204 347.2,228 322,204 Z" fill="#3F8A66" stroke="#2E6A52" stroke-width="1.6"/><ellipse cx="322" cy="322" rx="20" ry="6" fill="#2E6A52" opacity="0.25"/><path d="M78,150 Q200,52 322,150" fill="none" stroke="#2E6A52" stroke-width="12" stroke-linecap="round"/><path d="M78,150 Q200,52 322,150" fill="none" stroke="#3F8A66" stroke-width="6" stroke-linecap="round"/><circle cx="78.0" cy="161.0" r="9" fill="#FBE3EA" stroke="#EFA8BF" stroke-width="1.4"/><circle cx="78.0" cy="161.0" r="3" fill="#D4AF37"/><circle cx="98.3" cy="146.0" r="9" fill="#FBE3EA" stroke="#EFA8BF" stroke-width="1.4"/><circle cx="98.3" cy="146.0" r="3" fill="#D4AF37"/><circle cx="118.7" cy="133.8" r="9" fill="#FBE3EA" stroke="#EFA8BF" stroke-width="1.4"/><circle cx="118.7" cy="133.8" r="3" fill="#D4AF37"/><circle cx="139.0" cy="124.2" r="9" fill="#FBE3EA" stroke="#EFA8BF" stroke-width="1.4"/><circle cx="139.0" cy="124.2" r="3" fill="#D4AF37"/><circle cx="159.3" cy="117.4" r="9" fill="#FBE3EA" stroke="#EFA8BF" stroke-width="1.4"/><circle cx="159.3" cy="117.4" r="3" fill="#D4AF37"/><circle cx="179.7" cy="113.4" r="9" fill="#FBE3EA" stroke="#EFA8BF" stroke-width="1.4"/><circle cx="179.7" cy="113.4" r="3" fill="#D4AF37"/><circle cx="200.0" cy="112.0" r="9" fill="#FBE3EA" stroke="#EFA8BF" stroke-width="1.4"/><circle cx="200.0" cy="112.0" r="3" fill="#D4AF37"/><circle cx="220.3" cy="113.4" r="9" fill="#FBE3EA" stroke="#EFA8BF" stroke-width="1.4"/><circle cx="220.3" cy="113.4" r="3" fill="#D4AF37"/><circle cx="240.7" cy="117.4" r="9" fill="#FBE3EA" stroke="#EFA8BF" stroke-width="1.4"/><circle cx="240.7" cy="117.4" r="3" fill="#D4AF37"/><circle cx="261.0" cy="124.2" r="9" fill="#FBE3EA" stroke="#EFA8BF" stroke-width="1.4"/><circle cx="261.0" cy="124.2" r="3" fill="#D4AF37"/><circle cx="281.3" cy="133.8" r="9" fill="#FBE3EA" stroke="#EFA8BF" stroke-width="1.4"/><circle cx="281.3" cy="133.8" r="3" fill="#D4AF37"/><circle cx="301.7" cy="146.0" r="9" fill="#FBE3EA" stroke="#EFA8BF" stroke-width="1.4"/><circle cx="301.7" cy="146.0" r="3" fill="#D4AF37"/><circle cx="322.0" cy="161.0" r="9" fill="#FBE3EA" stroke="#EFA8BF" stroke-width="1.4"/><circle cx="322.0" cy="161.0" r="3" fill="#D4AF37"/><path d="M92,122 Q200.0,136 308,122" fill="none" stroke="#2E6A52" stroke-width="2"/><path d="M100.3,123.0 q7,7.5 0,16.7 q-7,-7.5 0,-16.7 Z" fill="#2E6A52"/><path d="M116.9,124.9 q7,8.2 0,18.1 q-7,-8.2 0,-18.1 Z" fill="#3F8A66"/><path d="M133.5,126.3 q7,8.7 0,19.4 q-7,-8.7 0,-19.4 Z" fill="#2E6A52"/><path d="M150.2,127.5 q7,9.2 0,20.5 q-7,-9.2 0,-20.5 Z" fill="#3F8A66"/><path d="M166.8,128.3 q7,9.6 0,21.3 q-7,-9.6 0,-21.3 Z" fill="#2E6A52"/><path d="M183.4,128.8 q7,9.8 0,21.8 q-7,-9.8 0,-21.8 Z" fill="#3F8A66"/><path d="M200.0,129.0 q7,9.9 0,22.0 q-7,-9.9 0,-22.0 Z" fill="#2E6A52"/><path d="M216.6,128.8 q7,9.8 0,21.8 q-7,-9.8 0,-21.8 Z" fill="#3F8A66"/><path d="M233.2,128.3 q7,9.6 0,21.3 q-7,-9.6 0,-21.3 Z" fill="#2E6A52"/><path d="M249.8,127.5 q7,9.2 0,20.5 q-7,-9.2 0,-20.5 Z" fill="#3F8A66"/><path d="M266.5,126.3 q7,8.7 0,19.4 q-7,-8.7 0,-19.4 Z" fill="#2E6A52"/><path d="M283.1,124.9 q7,8.2 0,18.1 q-7,-8.2 0,-18.1 Z" fill="#3F8A66"/><path d="M299.7,123.0 q7,7.5 0,16.7 q-7,-7.5 0,-16.7 Z" fill="#2E6A52"/><circle cx="200.0" cy="46.7" r="7.5" fill="#EFA8BF"/><circle cx="208.8" cy="53.1" r="7.5" fill="#EFA8BF"/><circle cx="205.5" cy="63.5" r="7.5" fill="#EFA8BF"/><circle cx="194.5" cy="63.5" r="7.5" fill="#EFA8BF"/><circle cx="191.2" cy="53.1" r="7.5" fill="#EFA8BF"/><circle cx="200.0" cy="56.0" r="4.5" fill="#D4AF37"/><circle cx="150.0" cy="67.2" r="5.5" fill="#FBE3EA"/><circle cx="156.5" cy="71.9" r="5.5" fill="#FBE3EA"/><circle cx="154.0" cy="79.5" r="5.5" fill="#FBE3EA"/><circle cx="146.0" cy="79.5" r="5.5" fill="#FBE3EA"/><circle cx="143.5" cy="71.9" r="5.5" fill="#FBE3EA"/><circle cx="150.0" cy="74.0" r="3.3" fill="#D4AF37"/><circle cx="250.0" cy="67.2" r="5.5" fill="#FBE3EA"/><circle cx="256.5" cy="71.9" r="5.5" fill="#FBE3EA"/><circle cx="254.0" cy="79.5" r="5.5" fill="#FBE3EA"/><circle cx="246.0" cy="79.5" r="5.5" fill="#FBE3EA"/><circle cx="243.5" cy="71.9" r="5.5" fill="#FBE3EA"/><circle cx="250.0" cy="74.0" r="3.3" fill="#D4AF37"/><rect x="112" y="256" width="176" height="12" rx="4" fill="#2E6A52"/><rect x="126" y="268" width="10" height="48" fill="#3F8A66"/><rect x="264" y="268" width="10" height="48" fill="#3F8A66"/><path d="M120,252 Q200,222 280,252 Q200,272 120,252 Z" fill="#A8D5BE" stroke="#2E6A52" stroke-width="2"/><path d="M124,252 L276,252" stroke="#2E6A52" stroke-width="1.4" opacity="0.6"/><circle cx="200" cy="243" r="13" fill="#FFFBF6" stroke="#B8912A" stroke-width="1.2"/><circle cx="200" cy="240" r="5" fill="#D4AF37"/><circle cx="160" cy="246" r="7" fill="#EFA8BF" stroke="#2E6A52" stroke-width="1"/><circle cx="176" cy="246" r="7" fill="#D4AF37" stroke="#2E6A52" stroke-width="1"/><circle cx="224" cy="246" r="7" fill="#C4677F" stroke="#2E6A52" stroke-width="1"/><circle cx="240" cy="246" r="7" fill="#F2C9A0" stroke="#2E6A52" stroke-width="1"/><path d="M184,224 q6,-10 0,-18 q-6,-8 0,-16" fill="none" stroke="#FFFBF6" stroke-width="2.6" stroke-linecap="round" opacity="0.85"/><path d="M200,224 q6,-10 0,-18 q-6,-8 0,-16" fill="none" stroke="#FFFBF6" stroke-width="2.6" stroke-linecap="round" opacity="0.85"/><path d="M216,224 q6,-10 0,-18 q-6,-8 0,-16" fill="none" stroke="#FFFBF6" stroke-width="2.6" stroke-linecap="round" opacity="0.85"/><path d="M131,300 L157,300 L152,292 L136,292 Z" fill="#B8912A"/><rect x="141.5" y="272" width="5" height="20" fill="#D4AF37"/><ellipse cx="144" cy="270" rx="11" ry="5" fill="#D4AF37"/><path d="M144,252 q7,10 0,16 q-7,-6 0,-16 Z" fill="#EFA8BF"/><path d="M243,300 L269,300 L264,292 L248,292 Z" fill="#B8912A"/><rect x="253.5" y="272" width="5" height="20" fill="#D4AF37"/><ellipse cx="256" cy="270" rx="11" ry="5" fill="#D4AF37"/><path d="M256,252 q7,10 0,16 q-7,-6 0,-16 Z" fill="#EFA8BF"/><circle cx="56.0" cy="328.6" r="6.0" fill="#EFA8BF"/><circle cx="63.1" cy="333.7" r="6.0" fill="#EFA8BF"/><circle cx="60.4" cy="342.0" r="6.0" fill="#EFA8BF"/><circle cx="51.6" cy="342.0" r="6.0" fill="#EFA8BF"/><circle cx="48.9" cy="333.7" r="6.0" fill="#EFA8BF"/><circle cx="56.0" cy="336.0" r="3.6" fill="#D4AF37"/><circle cx="344.0" cy="328.6" r="6.0" fill="#EFA8BF"/><circle cx="351.1" cy="333.7" r="6.0" fill="#EFA8BF"/><circle cx="348.4" cy="342.0" r="6.0" fill="#EFA8BF"/><circle cx="339.6" cy="342.0" r="6.0" fill="#EFA8BF"/><circle cx="336.9" cy="333.7" r="6.0" fill="#EFA8BF"/><circle cx="344.0" cy="336.0" r="3.6" fill="#D4AF37"/><circle cx="110" cy="336" r="4" fill="#C4677F" opacity="0.65"/><circle cx="200" cy="336" r="4" fill="#C4677F" opacity="0.65"/><circle cx="290" cy="336" r="4" fill="#C4677F" opacity="0.65"/></svg></div>
+                    <span class="venue-tag rose">Tilak &amp; Haldi</span>
+                    <h4 class="venue-name">Bijemaranahalli</h4>
+                    <p class="venue-address">
+                        Shantigrama Hobli,<br>
+                        Hassan District, Karnataka, India
+                    </p>
+                    <p class="venue-when">Thu 19 November 2026 • Tilak Ceremony<br>Sat 21 November 2026 • Haldi Ceremony</p>
+                    <a href="https://maps.app.goo.gl/8H25HY2BxKV2v4yP9" target="_blank" rel="noopener" class="map-btn rose">📍 Open Google Maps</a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="invite-footer">
+            <p class="footer-script">With love and blessings</p>
+            <p class="footer-line">Ritu Maurya &amp; Mukesh Kumar Kushwaha</p>
+        </footer>
+    </div>
+
+    <script>
+        const soundtrack = document.getElementById('wedding-soundtrack');
+        const audioBtn   = document.getElementById('audio-toggle');
+        let isUserPlaying = false;
+
+        /* ---------- falling petals ---------- */
+        function buildFlowerShower() {
+            const container = document.getElementById('flower-layer');
+            if (container.childElementCount) return;
+            const totalFlowers = 16;
+            const flowerTypes = ['🌸', '🌺', '💮', '🍃', '🌿'];
+            for (let i = 0; i < totalFlowers; i++) {
+                const flower = document.createElement('div');
+                flower.classList.add('flower-petal');
+                flower.innerText = flowerTypes[Math.floor(Math.random() * flowerTypes.length)];
+                flower.style.left = Math.random() * 100 + '%';
+                flower.style.fontSize = Math.random() * 8 + 12 + 'px';
+                flower.style.animationDuration = Math.random() * 5 + 6 + 's';
+                flower.style.animationDelay = Math.random() * 6 + 's';
+                container.appendChild(flower);
+            }
+        }
+
+        /* ---------- open the envelope ---------- */
+        function revealInvitation() {
+            document.getElementById('splash-screen').classList.add('opened');
+            document.getElementById('main-content').classList.add('visible');
+            buildFlowerShower();
+
+            // Detect mobile/tablet devices
+            const isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent);
+
+            if (isMobile) {
+                // Desktop / laptop: music starts automatically
+                soundtrack.play()
+                    .then(() => {
+                        audioBtn.innerHTML = "🎵";
+                        isUserPlaying = true;
+                    })
+                    .catch((error) => {
+                        console.log("Music autoplay failed:", error);
+                        audioBtn.innerHTML = "🔇";
+                        isUserPlaying = false;
+                    });
+            } else {
+                // Mobile / tablet: music stays OFF by default
+                soundtrack.pause();
+                soundtrack.currentTime = 0;
+                audioBtn.innerHTML = "🔇";
+                isUserPlaying = false;
+            }
+
+            // Show the music control button
+            audioBtn.style.display = "flex";
+        }
+
+        /* ---------- music ---------- */
+        function toggleAudio() {
+            if (soundtrack.paused) {
+                soundtrack.play();
+                audioBtn.innerHTML = "🎵";
+                isUserPlaying = true;
+            } else {
+                soundtrack.pause();
+                audioBtn.innerHTML = "🔇";
+                isUserPlaying = false;
+            }
+        }
+        document.addEventListener("visibilitychange", function () {
+            if (document.hidden) {
+                soundtrack.pause();
+            } else if (isUserPlaying) {
+                soundtrack.play().catch(e => {});
+                audioBtn.innerHTML = "🎵";
+            }
+        });
+
+        /* ---------- cover slideshow ---------- */
+        const slides = document.querySelectorAll('.cover-slide');
+        const dots   = document.querySelectorAll('#slide-dots i');
+        let slideIdx = 0;
+        setInterval(function () {
+            const outgoing = slides[slideIdx];
+            dots[slideIdx].classList.remove('on');
+            slideIdx = (slideIdx + 1) % slides.length;
+            const incoming = slides[slideIdx];
+            // incoming fades in ON TOP of the outgoing one, so there is no
+            // washed-out double exposure halfway through the dissolve
+            incoming.style.zIndex = 2;
+            incoming.classList.add('on');
+            dots[slideIdx].classList.add('on');
+            setTimeout(function () {
+                outgoing.classList.remove('on');
+                incoming.style.zIndex = '';
+            }, 1500);
+        }, 5200);
+
+        /* ---------- tabs ---------- */
+        function activateTab(event, targetPanelId) {
+            document.querySelectorAll('.tab-trigger').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content-panel').forEach(panel => panel.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+            document.getElementById(targetPanelId).classList.add('active');
+        }
+        function jumpToVenue(event) {
+            event.preventDefault();
+            const triggers = document.querySelectorAll('.tab-trigger');
+            triggers.forEach(b => b.classList.remove('active'));
+            triggers[1].classList.add('active');
+            document.querySelectorAll('.tab-content-panel').forEach(p => p.classList.remove('active'));
+            document.getElementById('venue').classList.add('active');
+            document.querySelector('.navigation-tabs').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        </script>
+</body>
+</html>
